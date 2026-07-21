@@ -9,65 +9,56 @@ Each skill is a plain-English instruction set that powers an AI agent. You don't
 - "Practice asking my boss for a raise to $90k" → runs the Salary Negotiation Simulator
 - "Here's my dating app conversation, what do I say next?" → runs Rizz Coach
 - "Audit my subscriptions" → runs Sub Slayer
+- "Turn this blog post into a Twitter thread and LinkedIn post" → runs Content Repurposer
+- "I'm choosing between 3 job offers" → runs Decision Matrix Builder
 
-## 🔥 Original Skills
+## Skills by Category
+
+### 💰 Sales and Marketing Systems
+**Lead Follow-Up Engine** — Automates your lead nurturing sequence end-to-end. Decides when and how to follow up, drafts the messages, and tracks who's hot, who's warm, and who's going cold.
+**Try it:** _"I got 12 new leads from my webinar, set up follow-ups"_
+
+### 🤖 AI Agents for Real Work
+**Meeting Extractor** — Turns meeting chaos into clear action. Paste notes or transcript, get decisions, action items with owners and deadlines, open questions, and metrics mentioned.
+**Try it:** _"Here's my transcript from the product review [paste]"_
+
+### ⚙️ Business Automation for Founders
+**Founder Standup** — Your daily check-in as a solo founder. Takes 2 minutes in the morning — priorities, blockers, metrics — and keeps you honest about what actually got done.
+**Try it:** _"Morning standup"_
+
+### 📝 Prompt Systems and Non-Technical AI Workflows
+**Prompt Recipe Builder** — Turns you into a prompt engineer without learning a single technical concept. Describe what you want in plain English, get a reusable, structured prompt recipe.
+**Try it:** _"I need a prompt that writes product descriptions for my ecommerce store"_
+
+### 🏗️ Web Applications and Product Builds
+**MVP Scoper** — Turns your raw idea into a buildable spec. Features, priorities, what to build first, what to skip, and what the MVP actually looks like. Stops you from overbuilding.
+**Try it:** _"I want to build an app that connects dog owners with local dog walkers"_
+
+### 📊 Operator Dashboards and Decision Systems
+**Decision Matrix Builder** — Helps you make hard decisions without second-guessing. Builds a weighted matrix that cuts through bias and analysis paralysis.
+**Try it:** _"Help me decide between HubSpot, Pipedrive, and Salesforce"_
+
+### 📢 Content, Traffic, and Skill Distribution
+**Content Repurposer** — Takes one piece of content and turns it into every format you need — Twitter thread, LinkedIn post, email newsletter, TikTok script, and more.
+**Try it:** _"Turn this blog post into a LinkedIn post and Twitter thread [paste]"_
+
+---
+
+## 🔥 Flagship Skills
 
 ### 💰 Salary Negotiation Simulator
 Practices the salary raise conversation with you before you have it for real. Role-plays as your boss, coaches you through objections, and gives you a script you can actually use.
-
-**How it works:**
-- Gathers your context (current salary, target, leverage, who you're negotiating with)
-- Researches market salary data for your role and location
-- Role-plays as your boss — realistic pushback, budget concerns, the "let me think about it" stall
-- Coaches you through objections in real-time without breaking character
-- Debriefs you on what went well, what to fix, and why
-- Hands you a clean script you can use in the real conversation
-- Covers timing, format, what NOT to say, and your best alternative if the answer is no
-
 **Try it:** _"I want to ask for a raise from $75k to $90k"_
-
-**Why it matters:** People already pay human coaches $200-500 for this. One successful negotiation pays for the skill 100x over. Clear B2B licensing path — universities, bootcamps, HR platforms, career coaching companies.
-
----
 
 ### 😏 Rizz Coach
 Your dating app texting wingman. Paste a conversation and it tells you exactly what to say next — and why. Reads the vibe, spots red flags, helps you not blow it.
-
-**Four modes:**
-- **Conversation Analysis** — Paste a conversation, get a vibe check. Are they into you? Is it dying? What's working and what's killing momentum?
-- **Next Move** — Get a specific text to send, with reasoning and an alternative option. Plus what NOT to say.
-- **Opening Lines** — Generate 3 personalized openers for a new match, each rated by response probability.
-- **Vibe Check** — Should you ask them out? Get a clear yes/not-yet/move-on assessment.
-
-**Built on real texting dynamics:**
-- Investment matching (don't reply in 30 seconds when they took 4 hours)
-- Question ratio tracking (if you're always asking, they're not invested)
-- The 3-message rule (three low-effort responses in a row = it's over)
-- Red flag detection (no questions, shrinking messages, "haha" with nothing added)
-
 **Try it:** _"[paste conversation] — what do I say next?"_
 
-**Why it matters:** Massive TAM (everyone dating), insane viral loop (people screenshot and share), repeat usage (every new conversation). Dating apps could license this as a premium feature.
-
----
-
 ### 💸 Sub Slayer
-Finds every subscription you're paying for, totals the damage, and tells you what to cancel. The "oh god I'm spending WHAT" moment, delivered.
-
-**How it works:**
-- Scans your Gmail for subscription confirmations, billing receipts, and renewal notices
-- Classifies each subscription by category (streaming, music, productivity, etc.)
-- Converts everything to monthly and annual costs for comparison
-- Identifies free trials about to convert to paid (with urgency alerts)
-- Flags duplicate subscriptions (Spotify AND Apple Music, etc.)
-- Ranks the kill list by priority with direct cancellation links
-- Gives you the gut-punch comparison: "That's a car payment per year"
-
-**If Gmail isn't connected**, works from pasted bank statements or a manually listed set of subscriptions.
-
+Finds every subscription you're paying for, totals the damage, and tells you what to cancel. Scans your Gmail for recurring charges you forgot about.
 **Try it:** _"Audit my subscriptions"_
 
-**Why it matters:** Rocket Money built a $1.2B business on this concept. Strongest as a viral acquisition tool — the "I was spending $340/month and forgot about half of it" moment is inherently shareable.
+---
 
 ## Getting Started
 
@@ -88,11 +79,31 @@ Each skill lives in its folder as a `SKILL.md` file — pure plain-English instr
 Cosmos-Engine/
 ├── README.md
 ├── LICENSE
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── skill-request.md
+│   │   └── bug-report.md
+│   └── workflows/
+│       └── validate-skills.yml
 ├── salary-negotiation-simulator/
 │   └── SKILL.md
 ├── rizz-coach/
 │   └── SKILL.md
-└── sub-slayer/
+├── sub-slayer/
+│   └── SKILL.md
+├── lead-follow-up-engine/
+│   └── SKILL.md
+├── meeting-extractor/
+│   └── SKILL.md
+├── founder-standup/
+│   └── SKILL.md
+├── prompt-recipe-builder/
+│   └── SKILL.md
+├── mvp-scoper/
+│   └── SKILL.md
+├── decision-matrix-builder/
+│   └── SKILL.md
+└── content-repurposer/
     └── SKILL.md
 ```
 
@@ -101,12 +112,12 @@ Cosmos-Engine/
 These skills are designed for:
 - **Direct use** — clone the Superagent template and use immediately
 - **Viral sharing** — the template link is zero-friction for new users
-- **B2B licensing** — each skill maps to a clear industry use case (career services, dating platforms, fintech)
+- **B2B licensing** — each skill maps to a clear industry use case (career services, dating platforms, fintech, sales teams, founder tools)
 - **Marketplace listing** — publish as a paid or free template in the Base44 marketplace
 
 ## About
 
-Built by Grant Daniels using [Base44](https://base44.com). These are original skills — not derived from or based on any existing skill in the Base44 registry or third-party skill store.
+Built by [Grant Daniels](https://github.com/cgdaniels23) using [Base44](https://base44.com). These are original skills — not derived from or based on any existing skill in the Base44 registry or third-party skill store.
 
 ## License
 
