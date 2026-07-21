@@ -1,0 +1,69 @@
+name: Validate Skills
+
+on:
+  pull_request:
+    paths:
+      - "**/SKILL.md"
+  push:
+    paths:
+      - "**/SKILL.md"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate SKILL.md frontmatter
+        run: |
+          set -e
+          EXIT_CODE=0
+          for file in $(find . -name "SKILL.md" -not -path "./.git/*"); do
+            echo "Checking: $file"
+
+            # Check file has frontmatter
+            if ! head -1 "$file" | grep -q "^---$"; then
+              echo "  FAIL: Missing opening --- in $file"
+              EXIT_CODE=1
+              continue
+            fi
+
+            # Check required fields exist
+            for field in name description; do
+              if ! grep -q "^${field}:" "$file"; then
+                echo "  FAIL: Missing required field $field in $file"
+                EXIT_CODE=1
+              else
+                echo "  OK: $field present"
+              fi
+            done
+
+            # Check name is lowercase-kebab-case
+            NAME=$(grep "^name:" "$file" | head -1 | sed 's/name: //' | tr -d ' ')
+            if ! echo "$NAME" | grep -qE '^[a-z0-9]+(-[a-z0-9]+)*$'; then
+              echo "  WARN: name $NAME is not in lowercase-kebab-case format"
+            else
+              echo "  OK: name format valid"
+            fi
+
+            # Check description is non-empty
+            DESC=$(grep "^description:" "$file" | head -1 | sed 's/description: //' | sed 's/^"//' | sed 's/"$//')
+            if [ -z "$DESC" ]; then
+              echo "  FAIL: description is empty in $file"
+              EXIT_CODE=1
+            else
+              DESC_LEN=${#DESC}
+              echo "  OK: description present ($DESC_LEN chars)"
+              if [ "$DESC_LEN" -gt 120 ]; then
+                echo "  WARN: description is long ($DESC_LEN chars) - consider trimming under 120"
+              fi
+            fi
+
+            echo ""
+          done
+
+          if [ "$EXIT_CODE" -ne 0 ]; then
+            echo "Validation FAILED"
+            exit 1
+          fi
+          echo "All SKILL.md files valid"
