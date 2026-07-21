@@ -1,64 +1,95 @@
 # Cosmos Engine 🌌
 
-A collection of original, first-of-their-kind AI skills for people who don't code. Built on [Base44](https://base44.com). No setup, no technical knowledge, no configuration screens — just talk naturally and the skills handle the rest.
+A collection of original AI skills for people who don't code. Built on [Base44](https://base44.com). No setup, no technical knowledge, no configuration screens — just talk naturally and the skills handle the rest.
 
 ## What are these?
 
 Each skill is a plain-English instruction set that powers an AI agent. You don't install apps, fill out forms, or remember commands. Just describe what you want in conversation:
 
-- "Practice asking my boss for a raise to $90k" → runs the Salary Negotiation Simulator
-- "Here's my dating app conversation, what do I say next?" → runs Rizz Coach
-- "Audit my subscriptions" → runs Sub Slayer
-- "Turn this blog post into a Twitter thread and LinkedIn post" → runs Content Repurposer
-- "I'm choosing between 3 job offers" → runs Decision Matrix Builder
+- "Help me ask for a raise from $75k to $90k" → runs Salary Negotiation Coach
+- "What do I text my match next?" → runs Dating App Wingman
+- "Find all my subscriptions" → runs Subscription Audit
+- "Fix my prompt: 'help me make my website better'" → runs Fix My Prompt
+- "Help me decide between HubSpot, Pipedrive, and Salesforce" → runs Help Me Decide
+
+Every skill is named after what people actually search for — not clever branding. Each skill surfaces one "holy shit" moment, recommends the next natural skill, and offers to share the result.
 
 ## Skills by Category
 
 ### 💰 Sales and Marketing Systems
-**Lead Follow-Up Engine** — Automates your lead nurturing sequence end-to-end. Decides when and how to follow up, drafts the messages, and tracks who's hot, who's warm, and who's going cold.
-**Try it:** _"I got 12 new leads from my webinar, set up follow-ups"_
+**Sales Follow-Up** — Write follow up emails, set up follow up sequences, and track who's hot, who's warm, and who's going cold.
+**Try it:** _"help me follow up with these 12 leads from my webinar"_
+→ Chains to: Daily Focus
 
 ### 🤖 AI Agents for Real Work
-**Meeting Extractor** — Turns meeting chaos into clear action. Paste notes or transcript, get decisions, action items with owners and deadlines, open questions, and metrics mentioned.
-**Try it:** _"Here's my transcript from the product review [paste]"_
+**Meeting Notes** — Turn meeting chaos into clear action. Paste notes or transcript, get decisions, action items with owners and deadlines, open questions, and what was actually decided.
+**Try it:** _"what did we decide? [paste meeting notes]"_
+→ Chains to: Daily Focus
 
 ### ⚙️ Business Automation for Founders
-**Founder Standup** — Your daily check-in as a solo founder. Takes 2 minutes in the morning — priorities, blockers, metrics — and keeps you honest about what actually got done.
-**Try it:** _"Morning standup"_
+**Daily Focus** — Plan your day in 2 minutes. Tell it what you're working on, what's blocking you, and what matters — it keeps you honest about what actually got done.
+**Try it:** _"help me plan my day"_
+→ Chains to: Meeting Notes
 
 ### 📝 Prompt Systems and Non-Technical AI Workflows
-**Prompt Recipe Builder** — Turns you into a prompt engineer without learning a single technical concept. Describe what you want in plain English, get a reusable, structured prompt recipe.
-**Try it:** _"I need a prompt that writes product descriptions for my ecommerce store"_
+**Fix My Prompt** — Fix a fuzzy AI prompt and turn it into a clear one that actually gets you somewhere. Paste what you were about to ask ChatGPT, Claude, or any AI tool.
+**Try it:** _"fix my prompt: 'help me make my website better'"_
+→ Chains to: Prompt Templates
+
+**Prompt Templates** — Create reusable prompt templates without learning a single technical concept. Describe what you want in plain English, get a structured template you can use over and over.
+**Try it:** _"make me a prompt template for writing product descriptions"_
+→ Chains to: Fix My Prompt
 
 ### 🏗️ Web Applications and Product Builds
-**MVP Scoper** — Turns your raw idea into a buildable spec. Features, priorities, what to build first, what to skip, and what the MVP actually looks like. Stops you from overbuilding.
+**Scope My Idea** — Turn your app idea into a buildable spec. Features, priorities, what to build first, what to skip, and what the MVP actually looks like.
 **Try it:** _"I want to build an app that connects dog owners with local dog walkers"_
+→ Chains to: Sales Follow-Up
 
 ### 📊 Operator Dashboards and Decision Systems
-**Decision Matrix Builder** — Helps you make hard decisions without second-guessing. Builds a weighted matrix that cuts through bias and analysis paralysis.
-**Try it:** _"Help me decide between HubSpot, Pipedrive, and Salesforce"_
+**Help Me Decide** — Make hard decisions without second-guessing. Builds a weighted decision matrix that cuts through bias and analysis paralysis. For hiring, vendors, partnerships, even apartments.
+**Try it:** _"help me decide between 3 job offers"_
+→ Chains to: Scope My Idea
 
 ### 📢 Content, Traffic, and Skill Distribution
-**Content Repurposer** — Takes one piece of content and turns it into every format you need — Twitter thread, LinkedIn post, email newsletter, TikTok script, and more.
-**Try it:** _"Turn this blog post into a LinkedIn post and Twitter thread [paste]"_
+**Repurpose Content** — Take one piece of content and turn it into every format you need — Twitter thread, LinkedIn post, email newsletter, TikTok script, and more.
+**Try it:** _"turn this blog post into a LinkedIn post and Twitter thread [paste text]"_
+→ Chains to: Fix My Prompt
 
 ---
 
 ## 🔥 Flagship Skills
 
-### 💰 Salary Negotiation Simulator
-Practices the salary raise conversation with you before you have it for real. Role-plays as your boss, coaches you through objections, and gives you a script you can actually use.
-**Try it:** _"I want to ask for a raise from $75k to $90k"_
+### 💰 Salary Negotiation Coach
+Practice how to ask for a raise or negotiate a salary offer. Role-plays as your boss or hiring manager, coaches you through objections, researches market salary data, and gives you a script you can actually use.
+**Try it:** _"help me ask for a raise from $75k to $90k"_
+→ Chains to: Help Me Decide
 
-### 😏 Rizz Coach
-Your dating app texting wingman. Paste a conversation and it tells you exactly what to say next — and why. Reads the vibe, spots red flags, helps you not blow it.
-**Try it:** _"[paste conversation] — what do I say next?"_
+### 💑 Dating App Wingman
+Your dating app texting wingman. Paste a conversation and get advice on what to say next — works for any gender, any orientation, any app. Reads the vibe, spots red flags, helps you not blow it.
+**Try it:** _"what do I text my match next? [paste conversation]"_
+→ Chains to: Help Me Decide
 
-### 💸 Sub Slayer
-Finds every subscription you're paying for, totals the damage, and tells you what to cancel. Scans your Gmail for recurring charges you forgot about.
-**Try it:** _"Audit my subscriptions"_
+### 💸 Subscription Audit
+Find every subscription you're paying for, total the damage, and see what to cancel. Scans your email for recurring charges you forgot about. The "oh god I'm spending WHAT" moment, delivered.
+**Try it:** _"find all my subscriptions"_
+→ Chains to: Daily Focus
 
 ---
+
+## Skill Chain Map
+
+Every skill recommends the next one — creating a network effect where each skill is a discovery path to every other:
+
+```
+Fix My Prompt → Prompt Templates → Fix My Prompt
+Meeting Notes → Daily Focus → Meeting Notes
+Scope My Idea → Sales Follow-Up → Daily Focus
+Help Me Decide → Scope My Idea
+Repurpose Content → Fix My Prompt
+Subscription Audit → Daily Focus
+Salary Negotiation Coach → Help Me Decide
+Dating App Wingman → Help Me Decide
+```
 
 ## Getting Started
 
@@ -67,7 +98,7 @@ Get the template link from the author, click it, and you get your own AI agent w
 
 ### Option 2: Upload skill files to your own agent
 1. Download the skill folders from this repo
-2. In your Base44 Superagent editor, go to Plugins → Skills → Upload skill file
+2. In your Base44 Superagent editor, go to Tools → Skills → Upload skill file
 3. Upload any `.md` file and activate it
 
 ### Option 3: Copy the instructions
@@ -85,35 +116,38 @@ Cosmos-Engine/
 │   │   └── bug-report.md
 │   └── workflows/
 │       └── validate-skills.yml
-├── salary-negotiation-simulator/
+├── skills/
+│   ├── index.html
+│   ├── sales-marketing-systems/
+│   ├── ai-agents-for-real-work/
+│   ├── business-automation-for-founders/
+│   ├── prompt-systems/
+│   ├── web-applications-product-builds/
+│   ├── operator-dashboards/
+│   └── content-traffic-skill-distribution/
+├── salary-negotiation-coach/
 │   └── SKILL.md
-├── rizz-coach/
+├── dating-app-wingman/
 │   └── SKILL.md
-├── sub-slayer/
+├── subscription-audit/
 │   └── SKILL.md
-├── lead-follow-up-engine/
+├── sales-follow-up/
 │   └── SKILL.md
-├── meeting-extractor/
+├── meeting-notes/
 │   └── SKILL.md
-├── founder-standup/
+├── daily-focus/
 │   └── SKILL.md
-├── prompt-recipe-builder/
+├── prompt-templates/
 │   └── SKILL.md
-├── mvp-scoper/
+├── scope-my-idea/
 │   └── SKILL.md
-├── decision-matrix-builder/
+├── help-me-decide/
 │   └── SKILL.md
-└── content-repurposer/
+├── repurpose-content/
+│   └── SKILL.md
+└── fix-my-prompt/
     └── SKILL.md
 ```
-
-## Distribution & Licensing
-
-These skills are designed for:
-- **Direct use** — clone the Superagent template and use immediately
-- **Viral sharing** — the template link is zero-friction for new users
-- **B2B licensing** — each skill maps to a clear industry use case (career services, dating platforms, fintech, sales teams, founder tools)
-- **Marketplace listing** — publish as a paid or free template in the Base44 marketplace
 
 ## About
 
